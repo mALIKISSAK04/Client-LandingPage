@@ -203,15 +203,21 @@
 <a id="top-home-btn" class="top-home-btn">Return to Home</a>
 
 <script>
-  document.getElementById('top-home-btn').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.top.location.href = 'https://www.caretaxservices.com/';
-  });
+  // Only inject the portal iframe on the portal page, not on /gethelpnow
+  (function () {
+    var path = window.location.pathname;
+    // adjust the expected path/slug to YOUR portal page
+    var isPortalPage = /client-landingpage|caretaxportal/i.test(path);
+    if (!isPortalPage) return;
+
+    // ... your code that adds the full-screen iframe ...
+  })();
 </script>
-.getElementById('bottom-home-btn').addEventListener('click', goHome);
+
   </script>
 </body>
 </html>
+
 
 
 
