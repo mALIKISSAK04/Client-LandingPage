@@ -199,24 +199,10 @@
     // Inject current year into footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Ensure Return Home buttons redirect to top-level window
-<a id="top-home-btn" class="top-home-btn">Return to Home</a>
-
-<script>
-  // Only inject the portal iframe on the portal page, not on /gethelpnow
-  (function () {
-    var path = window.location.pathname;
-    // adjust the expected path/slug to YOUR portal page
-    var isPortalPage = /client-landingpage|caretaxportal/i.test(path);
-    if (!isPortalPage) return;
-
-    // ... your code that adds the full-screen iframe ...
-  })();
-</script>
-
   </script>
 </body>
 </html>
+
 
 
 
