@@ -201,16 +201,19 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // Ensure Return Home buttons redirect to top-level window
-    function goHome(event) {
-      event.preventDefault();
-      window.top.location.href = 'https://www.caretaxservices.com/';
-    }
+<a id="top-home-btn" class="top-home-btn">Return to Home</a>
 
-    document.getElementById('top-home-btn').addEventListener('click', goHome);
-    document.getElementById('bottom-home-btn').addEventListener('click', goHome);
+<script>
+  document.getElementById('top-home-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.top.location.href = 'https://www.caretaxservices.com/';
+  });
+</script>
+.getElementById('bottom-home-btn').addEventListener('click', goHome);
   </script>
 </body>
 </html>
+
 
 
 
