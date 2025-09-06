@@ -1,33 +1,34 @@
 <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <title>CARE & TAX SERVICES | Client Portal</title> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta name="description" content="Client Portal for Care & Tax Services. Book appointments, upload documents, estimate taxes, and more."> <style> :root { --teal-1: #2bb7a8; --teal-2: #1aa596; --ink: #0e3b36; --muted: #3d756f; --card: #ffffff; --ring: #8ee3da; --shadow: 0 10px 24px rgba(0,0,0,.10); --radius: 16px; --accent-rule: linear-gradient(90deg, var(--teal-1), var(--teal-2)); } 
-  html, body {
-  height: 100%; margin: 0; padding: 0;
-  font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--teal-1); color: #fff; min-height: 100%;
-  box-sizing: border-box;
+
+html, body {
+height: 100%; margin: 0; padding: 0;
+font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+background: var(--teal-1); color: #fff; min-height: 100%;
+box-sizing: border-box;
 }
 
 body {
-  background: linear-gradient(to bottom, var(--teal-1) 0%, var(--teal-2) 100%);
-  min-height: 100vh; position: relative; overflow-x: hidden;
+background: linear-gradient(to bottom, var(--teal-1) 0%, var(--teal-2) 100%);
+min-height: 100vh; position: relative; overflow-x: hidden;
 }
 
 body::before {
-  content: ""; pointer-events: none; position: fixed; inset: 0; opacity: 0.07; z-index: 0;
-  background: repeating-linear-gradient(135deg, #fff 0px, #fff 2px, transparent 2px, transparent 28px),
-              repeating-linear-gradient(45deg, #fff 0px, #fff 1.5px, transparent 1.5px, transparent 22px);
-  mix-blend-mode: soft-light;
+content: ""; pointer-events: none; position: fixed; inset: 0; opacity: 0.07; z-index: 0;
+background: repeating-linear-gradient(135deg, #fff 0px, #fff 2px, transparent 2px, transparent 28px),
+repeating-linear-gradient(45deg, #fff 0px, #fff 1.5px, transparent 1.5px, transparent 22px);
+mix-blend-mode: soft-light;
 }
 
-/* Top bar with Return Home button */
+/\* Top bar with Return Home button \*/
 .top-home-bar {
-  width: 100%; text-align: center; background: var(--teal-2); padding: 12px 0;
+width: 100%; text-align: center; background: var(--teal-2); padding: 12px 0;
 }
 .top-home-btn {
-  display: inline-block; background: #fff; color: var(--teal-2); font-weight: 600;
-  border-radius: 999px; padding: 8px 20px; text-decoration: none;
-  transition: transform .15s, background .2s;
+display: inline-block; background: #fff; color: var(--teal-2); font-weight: 600;
+border-radius: 999px; padding: 8px 20px; text-decoration: none;
+transition: transform .15s, background .2s;
 }
-.top-home-btn:hover { background: #f4f4f4; transform: scale(1.03); }
+.top-home-btn\:hover { background: #f4f4f4; transform: scale(1.03); }
 
 .container { max-width: 980px; margin: 0 auto; padding: 24px; position: relative; z-index: 1; }
 header { text-align: center; padding-top: 32px; padding-bottom: 16px; }
@@ -38,10 +39,10 @@ header { text-align: center; padding-top: 32px; padding-bottom: 16px; }
 main { display: flex; flex-direction: column; align-items: center; min-height: calc(100vh - 80px); justify-content: center; padding-bottom: 32px; }
 
 .welcome-card {
-  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
-  padding: 32px 28px 28px 28px; max-width: 500px; width: 100%;
-  margin: 0 auto 32px auto; display: flex; flex-direction: column; align-items: center;
-  position: relative; z-index: 2; color: var(--ink);
+background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+padding: 32px 28px 28px 28px; max-width: 500px; width: 100%;
+margin: 0 auto 32px auto; display: flex; flex-direction: column; align-items: center;
+position: relative; z-index: 2; color: var(--ink);
 }
 .welcome-card h2 { font-size: 1.35rem; font-weight: 600; margin-bottom: 12px; color: var(--ink); text-align: center; }
 .welcome-card p { color: var(--muted); font-size: 1rem; margin-bottom: 24px; text-align: center; line-height: 1.5; }
@@ -51,23 +52,23 @@ main { display: flex; flex-direction: column; align-items: center; min-height: c
 .why-pills { display: flex; gap: 14px; justify-content: center; align-items: stretch; flex-wrap: wrap; margin-bottom: 10px; }
 
 .pill {
-  background: var(--card); border-radius: 32px; box-shadow: 0 2px 8px rgba(44,183,168,0.06), 0 0 0 1.5px var(--ring) inset;
-  padding: 14px 18px; flex: 1; max-width: 180px; display: flex; flex-direction: column;
-  align-items: center; text-align: center; border: none; color: var(--ink); font-size: 0.97rem; font-weight: 400;
+background: var(--card); border-radius: 32px; box-shadow: 0 2px 8px rgba(44,183,168,0.06), 0 0 0 1.5px var(--ring) inset;
+padding: 14px 18px; flex: 1; max-width: 180px; display: flex; flex-direction: column;
+align-items: center; text-align: center; border: none; color: var(--ink); font-size: 0.97rem; font-weight: 400;
 }
 .pill .pill-emoji { font-size: 1.4em; margin-bottom: 4px; line-height: 1; opacity: 0.92; }
 .pill .pill-label { font-weight: 600; margin-bottom: 3px; color: var(--ink); font-size: 1rem; }
 .pill .pill-desc { color: var(--muted); font-size: 0.97rem; line-height: 1.35; }
 
 .cta-btn {
-  display: inline-block; background: linear-gradient(90deg, var(--teal-2), var(--teal-1)); color: #fff;
-  font-size: 1.09rem; font-weight: 600; border: none; border-radius: 999px; padding: 13px 36px; margin-top: 26px;
-  box-shadow: 0 2px 10px rgba(44,183,168,0.14); transition: background .18s, box-shadow .17s, transform .13s;
-  cursor: pointer; outline: none; text-decoration: none;
+display: inline-block; background: linear-gradient(90deg, var(--teal-2), var(--teal-1)); color: #fff;
+font-size: 1.09rem; font-weight: 600; border: none; border-radius: 999px; padding: 13px 36px; margin-top: 26px;
+box-shadow: 0 2px 10px rgba(44,183,168,0.14); transition: background .18s, box-shadow .17s, transform .13s;
+cursor: pointer; outline: none; text-decoration: none;
 }
-.cta-btn:hover, .cta-btn:active { background: linear-gradient(90deg, #188c7f, #159080); transform: translateY(-1px) scale(1.01); }
+.cta-btn\:hover, .cta-btn\:active { background: linear-gradient(90deg, #188c7f, #159080); transform: translateY(-1px) scale(1.01); }
 
-section[aria-labelledby="features-title"] { width: 100%; margin: 0 auto 32px auto; text-align: center; }
+section\[aria-labelledby="features-title"] { width: 100%; margin: 0 auto 32px auto; text-align: center; }
 .features-title { font-size: 1.22rem; color: #fff; font-weight: 600; margin-bottom: 22px; }
 .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 16px; }
 .feature-card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 16px; display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 116px; color: var(--ink); }
@@ -80,47 +81,50 @@ section[aria-labelledby="features-title"] { width: 100%; margin: 0 auto 32px aut
 .features-cta-row .cta-btn { margin: 8px auto; display: inline-block; }
 
 footer {
-  width: 100%; text-align: center; background: transparent;
-  padding: 18px 0 12px 0; font-size: 0.99rem; color: #fff; opacity: 0.98;
+width: 100%; text-align: center; background: transparent;
+padding: 18px 0 12px 0; font-size: 0.99rem; color: #fff; opacity: 0.98;
 }
 
-/* Hide the "What You Can Do in the Portal" section on mobile only */
+/\* Hide the "What You Can Do in the Portal" section on mobile only \*/
 @media (max-width: 768px) {
-  section[aria-labelledby="features-title"] {
-    display: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  html, body { overflow-x: hidden; }
+section\[aria-labelledby="features-title"] {
+display: none !important;
+margin: 0 !important;
+padding: 0 !important;
 }
-</style> </head> <body> <!-- Top bar with Return Home button --> <div class="top-home-bar"> <a href="https://www.caretaxservices.com" target="_top" rel="noopener noreferrer" class="top-home-btn" > Return to Home </a> </div> <div class="container"> <header> <h1 class="hero-h1">CARE & TAX SERVICES | Client Portal</h1> <h3 class="hero-h3">Service you can trust, Support that you deserve</h3> <div class="accent-rule"></div> </header> 
+html, body { overflow-x: hidden; }
+} </style> </head> <body> <!-- Top bar with Return Home button --> <div class="top-home-bar"> <a href="https://www.caretaxservices.com" target="_blank" rel="noopener noreferrer" class="top-home-btn" > Return to Home </a> </div> <div class="container"> <header> <h1 class="hero-h1">CARE & TAX SERVICES | Client Portal</h1> <h3 class="hero-h3">Service you can trust, Support that you deserve</h3> <div class="accent-rule"></div> </header>
+
   <main>
   <div class="welcome-card" id="hero-card">
     <h2>Welcome! How can we help you today?</h2>
     <p>From booking appointments to uploading documents and estimating your taxes, manage everything here in one place.</p>
 
-    <section class="why-choose-section" aria-labelledby="why-choose-title">
-      <h3 id="why-choose-title">Why Choose Our Secure Client Portal?</h3>
-      <div class="why-pills">
-        <div class="pill">
-          <span class="pill-emoji">📅</span>
-          <span class="pill-label">Easy Booking</span>
-          <span class="pill-desc">Schedule your appointment online—no phone calls needed.</span>
-        </div>
-        <div class="pill">
-          <span class="pill-emoji">🔒</span>
-          <span class="pill-label">Secure & Confidential</span>
-          <span class="pill-desc">Your information is protected with industry-standard data security.</span>
-        </div>
-        <div class="pill">
-          <span class="pill-emoji">⚡️</span>
-          <span class="pill-label">Quick & Convenient</span>
-          <span class="pill-desc">Finish in a few clicks and manage everything in one place.</span>
-        </div>
-      </div>
-    </section>
+```
+<section class="why-choose-section" aria-labelledby="why-choose-title">
+  <h3 id="why-choose-title">Why Choose Our Secure Client Portal?</h3>
+  <div class="why-pills">
+    <div class="pill">
+      <span class="pill-emoji">📅</span>
+      <span class="pill-label">Easy Booking</span>
+      <span class="pill-desc">Schedule your appointment online—no phone calls needed.</span>
+    </div>
+    <div class="pill">
+      <span class="pill-emoji">🔒</span>
+      <span class="pill-label">Secure & Confidential</span>
+      <span class="pill-desc">Your information is protected with industry-standard data security.</span>
+    </div>
+    <div class="pill">
+      <span class="pill-emoji">⚡️</span>
+      <span class="pill-label">Quick & Convenient</span>
+      <span class="pill-desc">Finish in a few clicks and manage everything in one place.</span>
+    </div>
+  </div>
+</section>
 
-    <a class="cta-btn" id="hero-cta" href="https://malikissak04.github.io/CareTaxPortal/">Open Client Portal</a>
+<a class="cta-btn" id="hero-cta" href="https://malikissak04.github.io/CareTaxPortal/">Open Client Portal</a>
+```
+
   </div>
 
   <section aria-labelledby="features-title">
@@ -155,28 +159,31 @@ footer {
     <h2>Welcome! How can we help you today?</h2>
     <p>From booking appointments to uploading documents and estimating your taxes, manage everything here in one place.</p>
 
-    <section class="why-choose-section" aria-labelledby="why-choose-title">
-      <h3 id="why-choose-title">Why Choose Our Secure Client Portal?</h3>
-      <div class="why-pills">
-        <div class="pill">
-          <span class="pill-emoji">📅</span>
-          <span class="pill-label">Easy Booking</span>
-          <span class="pill-desc">Schedule your appointment online—no phone calls needed.</span>
-        </div>
-        <div class="pill">
-          <span class="pill-emoji">🔒</span>
-          <span class="pill-label">Secure & Confidential</span>
-          <span class="pill-desc">Your information is protected with industry-standard data security.</span>
-        </div>
-        <div class="pill">
-          <span class="pill-emoji">⚡️</span>
-          <span class="pill-label">Quick & Convenient</span>
-          <span class="pill-desc">Finish in a few clicks and manage everything in one place.</span>
-        </div>
-      </div>
-    </section>
+```
+<section class="why-choose-section" aria-labelledby="why-choose-title">
+  <h3 id="why-choose-title">Why Choose Our Secure Client Portal?</h3>
+  <div class="why-pills">
+    <div class="pill">
+      <span class="pill-emoji">📅</span>
+      <span class="pill-label">Easy Booking</span>
+      <span class="pill-desc">Schedule your appointment online—no phone calls needed.</span>
+    </div>
+    <div class="pill">
+      <span class="pill-emoji">🔒</span>
+      <span class="pill-label">Secure & Confidential</span>
+      <span class="pill-desc">Your information is protected with industry-standard data security.</span>
+    </div>
+    <div class="pill">
+      <span class="pill-emoji">⚡️</span>
+      <span class="pill-label">Quick & Convenient</span>
+      <span class="pill-desc">Finish in a few clicks and manage everything in one place.</span>
+    </div>
+  </div>
+</section>
 
-    <a class="cta-btn" id="hero-cta" href="https://malikissak04.github.io/CareTaxPortal/">Open Client Portal</a>
+<a class="cta-btn" id="hero-cta" href="https://malikissak04.github.io/CareTaxPortal/">Open Client Portal</a>
+```
+
   </div>
 
   <section aria-labelledby="features-title">
@@ -208,14 +215,44 @@ footer {
     <a 
 href="https://www.caretaxservices.com
 "
-target="_top"
+target="_blank"
 rel="noopener noreferrer"
 class="top-home-btn"
 
-Return to Home
-</a>     </div>
+Return to Home </a>     </div>
+
   </section>
 </main>
 
 <footer>© <span id="year"></span> Care & Tax Services — Stone Mountain</footer>
-</div> <script> // Inject current year into footer document.getElementById('year').textContent = new Date().getFullYear(); </script> <script> // Force all "Return Home" links to open CareTax site in a new top-level tab/page, even inside iframes (function () { var HOME = 'https://www.caretaxservices.com/'; var topWin = window.top || window; var links = Array.prototype.slice.call( document.querySelectorAll('a.top-home-btn, a[href^="https://www.caretaxservices.com"]') ); links.forEach(function (a) { try { a.setAttribute('target', '_top'); var existingRel = (a.getAttribute('rel') || '').trim(); if (!/noopener/i.test(existingRel)) existingRel += (existingRel ? ' ' : '') + 'noopener'; if (!/noreferrer/i.test(existingRel)) existingRel += (existingRel ? ' ' : '') + 'noreferrer'; a.setAttribute('rel', existingRel); } catch (e) { /* no-op */ } a.addEventListener('click', function (e) { e.preventDefault(); try { var w = (topWin && topWin.open) ? topWin.open(HOME, '_blank') : null; if (!w) { // Popup blocked or failed — hard redirect in the top window (window.top || window).location.href = HOME; } } catch (err) { try { (window.top || window).location.href = HOME; } catch (_ignore) {} } }, { passive: false }); }); })(); </script> </body> </html> 
+</div> <script> // Inject current year into footer document.getElementById('year').textContent = new Date().getFullYear(); </script> <script> // Force all "Return Home" links to open CareTax site in a new top-level tab/page, even inside iframes (function () { var HOME = 'https://www.caretaxservices.com/'; var topWin = window.top || window; var links = Array.prototype.slice.call( document.querySelectorAll('a.top-home-btn, a[href^="https://www.caretaxservices.com"]') ); links.forEach(function (a) { try { a.setAttribute('target', '_top'); var existingRel = (a.getAttribute('rel') || '').trim(); if (!/noopener/i.test(existingRel)) existingRel += (existingRel ? ' ' : '') + 'noopener'; if (!/noreferrer/i.test(existingRel)) existingRel += (existingRel ? ' ' : '') + 'noreferrer'; a.setAttribute('rel', existingRel); } catch (e) { /* no-op */ } a.addEventListener('click', function (e) { e.preventDefault(); try { var w = (topWin && topWin.open) ? topWin.open(HOME, '_blank') : null; if (!w) { // Popup blocked or failed — hard redirect in the top window (window.top || window).location.href = HOME; } } catch (err) { try { (window.top || window).location.href = HOME; } catch (_ignore) {} } }, { passive: false }); }); })(); </script> <script>
+(function () {
+  var URL = 'https://www.caretaxservices.com/';
+  var selectors = [
+    'a.top-home-btn',
+    'a[href^="https://www.caretaxservices.com"]'
+  ];
+  var links = document.querySelectorAll(selectors.join(','));
+  function goTopNewTab(e){
+    e.preventDefault();
+    try {
+      // Prefer opening a NEW TAB from the TOP window context
+      var opener = (window.top && window.top !== window) ? window.top : window;
+      var win = opener.open(URL, '_blank', 'noopener');
+      // Fallback: hard top-level redirect if pop-up blocked
+      if (!win) {
+        (window.top && window.top.location) ? (window.top.location.href = URL) : (window.location.href = URL);
+      }
+    } catch (err) {
+      // Last-resort fallback
+      var w = window.open(URL, '_blank', 'noopener');
+      if (!w) window.location.href = URL;
+    }
+  }
+  links.forEach(function(a){
+    a.setAttribute('target','_blank');
+    a.setAttribute('rel','noopener noreferrer');
+    a.addEventListener('click', goTopNewTab, {passive:false});
+  });
+})();
+</script> </body> </html>
