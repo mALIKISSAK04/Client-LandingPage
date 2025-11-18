@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -16,205 +17,225 @@
       --shadow:0 8px 30px rgba(32,123,114,.18), 0 4px 12px rgba(0,0,0,.05);
     }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
-      color:var(--text);
-      background: linear-gradient(180deg, var(--bg), #27b9a6 35%, #2ec0ad);
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-    }
 
-    /* Top quick-links bar */
-    .top-links{
-      width:100%;
-      display:flex;
-      justify-content:center;
-      padding:10px 12px 6px;
-    }
-    .mini-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:8px 14px;
-      border-radius:999px;
-      font-weight:700;
-      text-decoration:none;
-      border:2px solid rgba(255,255,255,.9);
-      color:#fff;
-      background:transparent;
-      transition:background .15s ease, transform .06s ease;
-    }
-    .mini-btn:hover{ background:rgba(255,255,255,.15); transform:translateY(1px); }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  color:var(--text);
+  background: linear-gradient(180deg, var(--bg), #27b9a6 35%, #2ec0ad);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
 
-    /* Top header */
-    header {
-      width: 100%;
-      padding: 22px 16px 12px;
-      text-align: center;
-      color: #fff;
-      font-weight: 800;
-      letter-spacing: .3px;
-      line-height: 1.25;
-    }
-    header .title { font-size: clamp(20px, 2.4vw, 28px); margin-bottom: 12px; }
-    header .subtitle {
-      font-weight: 600; opacity: .95; font-size: clamp(13px, 1.6vw, 15px);
-      border-top: 2px solid rgba(255, 255, 255, 0.4); padding-top: 6px;
-    }
+/* Top quick-links bar */
+.top-links{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:10px 12px 6px;
+}
+.mini-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  border:2px solid rgba(255,255,255,.9);
+  color:#fff;
+  background:transparent;
+  transition:background .15s ease, transform .06s ease;
+}
+.mini-btn:hover{ background:rgba(255,255,255,.15); transform:translateY(1px); }
 
-    /* Progress bar accent */
-    .progress-wrap{
-      width:min(820px, 92vw);
-      height:6px;
-      background:rgba(255,255,255,.35);
-      border-radius:999px;
-      margin:8px auto 18px;
-      overflow:hidden;
-    }
-    .progress{
-      width:40%;
-      height:100%;
-      background:#fff;
-      border-radius:999px;
-      box-shadow: inset 0 0 1px rgba(0,0,0,.25);
-    }
+/* Top header */
+header {
+  width: 100%;
+  padding: 22px 16px 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: .3px;
+  line-height: 1.25;
+}
+header .title { font-size: clamp(20px, 2.4vw, 28px); margin-bottom: 12px; }
+header .subtitle {
+  font-weight: 600; opacity: .95; font-size: clamp(13px, 1.6vw, 15px);
+  border-top: 2px solid rgba(255, 255, 255, 0.4); padding-top: 6px;
+}
 
-    /* Card */
-    .card{
-      width:min(820px,92vw);
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:22px;
-      margin:8px auto 32px;
-    }
-    .card h1{ margin:0 0 6px; font-size: clamp(18px, 2.2vw, 24px); }
-    .card p.lead{ margin: 0 0 18px; color:var(--muted); font-size: clamp(14px, 1.6vw, 15.5px); }
+/* Progress bar accent */
+.progress-wrap{
+  width:min(820px, 92vw);
+  height:6px;
+  background:rgba(255,255,255,.35);
+  border-radius:999px;
+  margin:8px auto 18px;
+  overflow:hidden;
+}
+.progress{
+  width:40%;
+  height:100%;
+  background:#fff;
+  border-radius:999px;
+  box-shadow: inset 0 0 1px rgba(0,0,0,.25);
+}
 
-    /* Buttons grid */
-    .actions{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap:12px;
-    }
-    @media (max-width:640px){
-      .actions{ grid-template-columns: 1fr; }
-    }
+/* Card */
+.card{
+  width:min(820px,92vw);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+  margin:8px auto 32px;
+}
+.card h1{ margin:0 0 6px; font-size: clamp(18px, 2.2vw, 24px); }
+.card p.lead{ margin: 0 0 18px; color:var(--muted); font-size: clamp(14px, 1.6vw, 15.5px); }
 
-    .btn{
-      border:0;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.55rem;
-      padding:12px 16px;
-      border-radius:14px;
-      background:var(--primary-dark);
-      color:#fff;
-      font-weight:700;
-      text-decoration:none;
-      cursor:pointer;
-      transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
-      box-shadow: 0 2px 0 rgba(0,0,0,.08);
-      user-select:none;
-    }
-    .btn:hover{ background:#176c63; }
-    .btn:active{ transform: translateY(1px); }
+/* Buttons grid */
+.actions{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:12px;
+}
+@media (max-width:640px){
+  .actions{ grid-template-columns: 1fr; }
+}
 
-    /* Iframe section */
-    .iframe-wrap{ display:none; flex-direction:column; gap:12px; }
-    .iframe-toolbar{
-      display:flex; align-items:center; justify-content:space-between; gap:12px;
-      position:sticky; top:0; background:var(--card); padding-bottom:4px; z-index:2;
-    }
-    .iframe-title{ font-weight:700; color:var(--muted); font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    iframe{
-      width:100%; height:72vh; border:0; border-radius:12px;
-      box-shadow: inset 0 0 0 1px rgba(2, 88, 79, .06); background:#f8fafc;
-    }
+.btn{
+  border:0;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.55rem;
+  padding:12px 16px;
+  border-radius:14px;
+  background:var(--primary-dark);
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  cursor:pointer;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+  box-shadow: 0 2px 0 rgba(0,0,0,.08);
+  user-select:none;
+}
+.btn:hover{ background:#176c63; }
+.btn:active{ transform: translateY(1px); }
 
-    /* Footer */
-    footer{ color:#e6fffb; opacity:.9; font-size:12px; padding:12px 16px 24px; text-align:center; }
+/* Iframe section */
+.iframe-wrap{ display:none; flex-direction:column; gap:12px; }
+.iframe-toolbar{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  position:sticky; top:0; background:var(--card); padding-bottom:4px; z-index:2;
+}
+.iframe-title{ font-weight:700; color:var(--muted); font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+iframe{
+  width:100%; height:72vh; border:0; border-radius:12px;
+  box-shadow: inset 0 0 0 1px rgba(2, 88, 79, .06); background:#f8fafc;
+}
 
-    .aca-explainer{
-      margin-top: 24px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(148,163,184,.35);
-    }
+/* Footer */
+footer{ color:#e6fffb; opacity:.9; font-size:12px; padding:12px 16px 24px; text-align:center; }
 
-    .aca-explainer h2{
-      margin: 0 0 6px;
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--text);
-    }
+.aca-explainer{
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(148,163,184,.35);
+}
 
-    .aca-explainer p{
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.55;
-    }
+.aca-explainer h2{
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+}
 
-    .aca-video-wrap{
-      width: 100%;
-    }
+.aca-explainer p{
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
 
-    .aca-video-inner{
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%; /* 16:9 */
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: inset 0 0 0 1px rgba(2, 88, 79, .06);
-      background: #0f172a; /* fallback */
-    }
+.aca-video-wrap{
+  width: 100%;
+}
 
-    .aca-video-inner iframe{
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+.aca-video-inner{
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(2, 88, 79, .06);
+  background: #0f172a; /* fallback */
+}
 
-    .aca-logo-row{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 26px;
-      margin-top: 22px;
-      padding-bottom: 10px;
-    }
+.aca-video-inner iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
-    .aca-logo-row img{
-      height: 38px;   /* balanced text logos */
-      width: auto;
-      opacity: 0.9;
-      filter: drop-shadow(0 1px 1px rgba(0,0,0,0.10));
-      object-fit: contain;
-    }
+.aca-logo-row{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 22px;
+  padding-bottom: 10px;
+}
+
+.aca-logo-row img{
+  height: 38px;   /* balanced text logos */
+  width: auto;
+  opacity: 0.9;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.10));
+  object-fit: contain;
+}
+
+
   </style>
 </head>
 <body>
-  <!-- Top Go Back link (opens top-level window) -->
-<div class="top-links">
-  <a 
-    href="https://www.caretaxservices.com/gethelpnow" 
-    target="_top" 
-    rel="noopener" 
-    class="mini-btn"
-  >
-    Go Back
-  </a>
-</div>
-
+  <div class="top-links">
+    <a 
+      href="https://www.caretaxservices.com/" 
+      target="_top" 
+      rel="noopener" 
+      class="mini-btn"
+      style="margin:0 6px;"
+    >
+      Home Page
+    </a>
+    <a 
+      href="https://www.caretaxservices.com/services" 
+      target="_top" 
+      rel="noopener" 
+      class="mini-btn"
+      style="margin:0 6px;"
+    >
+      Our Services
+    </a>
+    <a 
+      href="https://www.caretaxservices.com/contact" 
+      target="_top" 
+      rel="noopener" 
+      class="mini-btn"
+      style="margin:0 6px;"
+    >
+      Contact Us
+    </a>
+  </div>
 
   <header>
     <div class="title">CARE &amp; TAX SERVICES | Client Portal</div>
@@ -234,65 +255,59 @@
         manage everything here in one place. Choose an option below.
       </p>
 
-      <div class="actions">
-        <button class="btn" data-link="https://info-caretaxservices.zohobookings.com/portal-embed#/caretaxservices" data-title="Book an Appointment">📅 Book an Appointment</button>
-        <button class="btn" data-link="https://forms.zohopublic.com/caretaxservices1/form/UploadDocuments/formperma/OAaNOkGETVmffER-Az1hxQsMh5xx16JKVQwJ6WM4XVs" data-title="Upload Documents">📤 Upload Documents</button>
-        <button class="btn" data-link="https://forms.zohopublic.com/caretaxservices1/form/ObamaCareACAApplication/formperma/8EAPqKYkMzzqR9Y-GHKNP7sAhqqBgokbkmuST7uujZ4" data-title="ObamaCare Application">🧾 ObamaCare Application</button>
-        <button class="btn" data-link="https://malikissak04.github.io/caretaxEstimator/" data-title="Tax Estimator">📊 Tax Estimator</button>
+
+  <div class="actions">
+    <button class="btn" data-link="https://info-caretaxservices.zohobookings.com/portal-embed#/caretaxservices" data-title="Book an Appointment">📅 Book an Appointment</button>
+    <button class="btn" data-link="https://forms.zohopublic.com/caretaxservices1/form/UploadDocuments/formperma/OAaNOkGETVmffER-Az1hxQsMh5xx16JKVQwJ6WM4XVs" data-title="Upload Documents">📤 Upload Documents</button>
+    <button class="btn" data-link="https://forms.zohopublic.com/caretaxservices1/form/ObamaCareACAApplication/formperma/8EAPqKYkMzzqR9Y-GHKNP7sAhqqBgokbkmuST7uujZ4" data-title="ObamaCare Application">🧾 ObamaCare Application</button>
+    <button class="btn" data-link="https://malikissak04.github.io/caretaxEstimator/" data-title="Tax Estimator">📊 Tax Estimator</button>
+  </div>
+
+  <div class="aca-explainer">
+    <h2>ObamaCare</h2>
+    <p>ObamaCare, also known as the Affordable Care Act (ACA), is a health law that provides low-cost or even $0 premium health insurance based on household income. Many families qualify for these savings, even if they have never applied before.</p>
+    <p>ACA plans include doctor visits, medications, and hospital care, with financial assistance from the government to make coverage more affordable.</p>
+    <p>A licensed agent can help you compare plans and enroll at no cost.</p>
+
+    <div class="aca-video-wrap">
+      <div class="aca-video-inner">
+        <iframe
+          src="https://www.youtube.com/embed/UVmdGTDFae8"
+          title="ObamaCare Explained"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
+    </div>
 
-      <div class="aca-explainer">
-        <h2>ObamaCare</h2>
-        <p>ObamaCare, also known as the Affordable Care Act (ACA), is a health law that provides low-cost or even $0 premium health insurance based on household income. Many families qualify for these savings, even if they have never applied before.</p>
-        <p>ACA plans include doctor visits, medications, and hospital care, with financial assistance from the government to make coverage more affordable.</p>
-        <p>A licensed agent can help you compare plans and enroll at no cost.</p>
-
-        <div class="aca-video-wrap">
-          <div class="aca-video-inner">
-            <iframe
-              src="https://www.youtube.com/embed/UVmdGTDFae8"
-              title="ObamaCare Explained"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="aca-logo-row">
-          <img src="https://logowik.com/content/uploads/images/ambetter7360.jpg" alt="Ambetter">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Oscar_Health_logo.svg/960px-Oscar_Health_logo.svg.png" alt="Oscar Health">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/UnitedHealthcare_%28logo%29.svg/2560px-UnitedHealthcare_%28logo%29.svg.png" alt="UnitedHealthcare">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Aetna_logo.svg/1280px-Aetna_logo.svg.png" alt="Aetna">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/KP_logo.svg/1280px-KP_logo.svg.png" alt="Kaiser Permanente">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Molina_Healthcare_logo.svg/512px-Molina_Healthcare_logo.svg.png" alt="Molina Healthcare">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Cigna_Logo.png" alt="Cigna">
-        </div>
-      </div>
-  <div class="aca-more-options">
+    <div class="aca-logo-row">
+      <img src="https://logowik.com/content/uploads/images/ambetter7360.jpg" alt="Ambetter">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Oscar_Health_logo.svg/960px-Oscar_Health_logo.svg.png" alt="Oscar Health">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/UnitedHealthcare_%28logo%29.svg/2560px-UnitedHealthcare_%28logo%29.svg.png" alt="UnitedHealthcare">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Aetna_logo.svg/1280px-Aetna_logo.svg.png" alt="Aetna">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/KP_logo.svg/1280px-KP_logo.svg.png" alt="Kaiser Permanente">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Molina_Healthcare_logo.svg/512px-Molina_Healthcare_logo.svg.png" alt="Molina Healthcare">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Cigna_Logo.png" alt="Cigna">
+    </div>
+  </div>
+    <div class="aca-more-options">
         <center> <p> And there are even more options — we work with many additional ACA carriers. </p> </center>
         </div>
-      </div> 
-      <!-- Bottom Go Back link -->
-      <div class="top-links" style="padding-top:14px;">
-        <a
-          href="https://malikissak04.github.io/Client-LandingPage/"
-          target="_top"
-          rel="noopener"
-          id="goBackBottom"
-          class="mini-btn"
-        >Go Back</a>
-      </div>
-    </section>
+      </div>  
+      
+</section>
 
-    <!-- Iframe view -->
-    <section id="iframeView" class="iframe-wrap" aria-hidden="true">
-      <div class="iframe-toolbar">
-        <button id="backBtn" class="btn">← Back</button>
-        <div class="iframe-title" id="iframeTitle">Loading…</div>
-      </div>
-      <iframe id="portalFrame" title="Client Portal Content" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
-    </section>
+<!-- Iframe view -->
+<section id="iframeView" class="iframe-wrap" aria-hidden="true">
+  <div class="iframe-toolbar">
+    <button id="backBtn" class="btn">← Back</button>
+    <div class="iframe-title" id="iframeTitle">Loading…</div>
+  </div>
+  <iframe id="portalFrame" title="Client Portal Content" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+</section>
+
+
   </main>
 
   <footer>© <span id="year"></span> Care &amp; Tax Services — Stone Mountain</footer>
@@ -345,6 +360,6 @@
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-</body>
 
+</body>
 </html>
